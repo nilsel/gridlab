@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+  <style type="text/css">
+
+  body {
+    font-family: 'Patua One', cursive;
+    font-size: 24px;
+  }
+
+  /* basic colors etc */
+  .gridwrap > div {
+    color: #fff;
+    background-color: #314f91;
+    border: 1px #231266 solid;
+    border-radius: 4px;
+    padding: 12px;
+  }
+
+
+  .gridwrap {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 4fr;
+    grid-gap: 8px;
+  }
+
+
+  .gridwrap > .top {
+    grid-column: span 12;
+  }
+  .gridwrap > .sidebar {
+    grid-column: span 12;
+  }
+
+  .gridwrap > .box {
+    grid-column: span 3;
+  }
+
+  .gridwrap > .box.wide {
+    grid-column: span 6;
+  }
+  .gridwrap > .box:nth-child(5) {
+    grid-row: span 2;
+  }
+  .gridwrap > .box:nth-child(6) {
+    grid-column: span 9;
+  }
+  .gridwrap > .box:nth-child(8) {
+    grid-row: span 3;
+  }
+  .gridwrap > .box:nth-child(12) {
+    grid-row: span 2;
+  }
+  .gridwrap > .box:nth-child(13) {
+    grid-column: span 6;
+  }
+
+  /* responsive layouts for smaller screens */
+  @media (max-width: 768px){
+    .gridwrap > .box {
+      grid-column: span 6 !important;
+    }
+  }
+  @media (max-width: 450px){
+    .gridwrap > .box {
+      grid-column: span 12 !important;
+    }
+  }
+
+  </style>
+
+</head>
+<body>
+  <div class="gridwrap">
+    <div class="top">top: span 12</div>
+    <div class="box wide">box 1, 6 fractions wide, 4 fractions high</div>
+    <div class="box">box 2</div>
+    <div class="box">box 3</div>
+    <div class="box">box 4: row span 2</div>
+    <div class="box">box 5: column: span 9</div>
+    <div class="box">box 6</div>
+    <div class="box">box 7: row span 3</div>
+    <div class="box">box 8</div>
+    <div class="box">box 9</div>
+    <div class="box">box 10</div>
+    <div class="box">box 11: row span 2</div>
+    <div class="box">box 12: column span 3</div>
+    <div class="sidebar">sidebar</div>
+  </div>
+
+  <a href="test4.html">next</a>
+
+</body>
+</html>

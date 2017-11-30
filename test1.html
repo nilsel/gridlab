@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+  <style type="text/css">
+
+  body {
+    font-family: 'Patua One', cursive;
+    font-size: 24px;
+  }
+
+  /* basic colors etc */
+  .gridwrap > div {
+    color: #fff;
+    background-color: #314f91;
+    border: 1px #231266 solid;
+    border-radius: 4px;
+    padding: 12px;
+  }
+
+
+  .gridwrap {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10vh 80vh;
+    grid-gap: 40px;
+  }
+
+
+  .gridwrap > .top {
+    grid-column: span 12;
+  }
+  .gridwrap > .sidebar {
+    grid-column: span 3;
+  }
+  .gridwrap > .content {
+    grid-column: span 9;
+  }
+
+
+  @media (max-width: 480px){
+    .gridwrap > .top {
+      grid-column: span 12;
+    }
+    .gridwrap > .sidebar {
+      grid-column: span 12;
+      grid-row: 3;
+    }
+    .gridwrap > .content {
+      grid-column: span 12;
+    }
+  }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="gridwrap">
+    <div class="top">top: grid-column: span 12; 10vh</div>
+    <div class="content">content: grid-column: span 9; 80vh</div>
+    <div class="sidebar">sidebar: grid-column: span 3;</div>
+  </div>
+
+  <a href="test2.html">next</a>
+</body>
+</html>

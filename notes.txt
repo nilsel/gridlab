@@ -1,0 +1,28 @@
+
+
+CSS Grids quicktro
+
+- Forget about floats and clears
+- Flexible tools for easy layout
+- Equal heights not a problem anymore
+- Columns: horizontal, rows: vertical
+
+- New CSS unit FR: fraction
+
+  This unit auto-calculates the needed width. No more percents!
+  1fr + 1fr = 50% 50%
+  3fr + 1fr = 75% 25%
+  9fr + 1fr = 90%  1%
+
+  1fr + 1fr + 2fr = 25% 25% 50%
+
+We can mix fixed-width units with fr units:
+  grid-template-columns: 100px 3fr 1fr;
+
+
+
+
+
+https://geddski.teachable.com/p/gridcritters
+https://gridbyexample.com/video/
+https://medium.freecodecamp.org/learn-css-grid-in-5-minutes-f582e87b1228
