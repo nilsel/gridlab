@@ -13,7 +13,7 @@
     background-color: #e6e6e6;
   }
 
-  a, a:hover {
+  a, a:hover, a:active, a:focus {
     border: none;
   }
 
@@ -25,7 +25,7 @@
   }
 
   .grid-item {
-    background-color: #f2f2f2;
+    background-color: #fff;
     margin: auto;
     margin: 0;
     align-self: stretch;    
@@ -36,8 +36,8 @@
     display: grid;
     flex-direction: column;
     padding: 14px;
-    grid-template-rows: 165px 22px 1fr 22px 22px;
-    /*grid-auto-rows: auto auto 5fr 1fr 1fr;*/
+    grid-template-rows: 145px 28px 1fr 22px 22px;
+    /*background-color: #fff;*/
   }
 
   /* such style! */
@@ -55,11 +55,17 @@
   .tile * {
     /*border: 1px red dotted;*/
   }
-  .tile img {
-    width: 50%;
+  .tile img, .tile-img img {
+    /*width: 50%;*/
     max-height: 100px;
     margin: 2rem auto;
+    align-self: center;
   }
+  .tile-img {
+    background-color: #f2f2f2;
+    margin: -14px -14px 14px -14px ;
+  }
+
   .tile strong {
     align-self: flex-start;
     /*border-bottom: 1px solid #000;*/
@@ -75,6 +81,11 @@
     height: 20px;
   }
 
+  .tile .badge {
+    font-weight: 800;
+    font-family: "Open Sans Bold",Arial,ArialMT,sans-serif;
+    background-color: #da291c;
+  }
   </style>
 </head>
 
@@ -83,65 +94,67 @@
 
     <div class="grid-item">
       <div class="tile">
-        <img src="images/employees.svg" />
+        <div class="tile-img"><img src="images/employees.svg" /></div>
         <strong>Ansatte</strong>
         <p>Samlet overskrift over dine ansatte og avtaler knyttet til individer.</p>
         <hr/>
-        <a href="#">Antall ansatte: <strong>24</strong></a>
+        <a href="#">Antall ansatte: <span class="badge">24</span></a>
       </div>
     </div>
     <div class="grid-item">
       <div class="tile">
-        <img src="images/laptop-e.svg" />
+        <div class="tile-img"><img src="images/laptop-e.svg" /></div>
         <strong>Faktura og regnskap</strong>
         <p>Har du regnskap?! Sa folk. Du kunne tru det sa dem, folk på den tiden hadde jo ikke annet å gjøre serru.</p>
         <hr/>
-        <a href="#">Ubehandlede faktura: <strong>4</strong></a>
+        <a href="#">Ubehandlede faktura: <span class="badge">4</span></a>
       </div>
     </div>
     <div class="grid-item">
       <div class="tile">
-        <img src="images/fordelskunde.svg" />
-        <strong>Avtaler</strong>
-        <p>Få oversikt over dine produkter og avtaler.</p>
+        <div class="tile-img"><img src="images/fordelskunde.svg" /></div>
+        <strong>Lønnsfil</strong>
+        <p>
+          <button class="stb-btn transparent light">Last opp lønnsfil</button>
+        </p>
         <hr/>
-        <a href="#">Antall ansatte: <strong>24</strong></a>
+        <a href="#">Sist oppdatert: <strong>6/12</strong></a>
       </div>
     </div>
     <div class="grid-item">
       <div class="tile">
-        <img src="images/document.svg" />
-        <strong>Ansatte</strong>
-        <p>Samlet overskrift over dine ansatte og avtaler knyttet til individer.</p>
+        <div class="tile-img"><img src="images/document.svg" /></div>
+        <strong>Samarbeidsavtaler</strong>
+        <p>Se fordelene du får gjennom ditt medlemskap i NHO.</p>
         <hr/>
-        <a href="#">Antall ansatte: <strong>24</strong></a>
+        <a href="#">Fordeler tatt i bruk: <strong>2 av 5</strong></a>
       </div>
     </div>
     <div class="grid-item">
       <div class="tile">
-        <img src="images/butikk.svg" />
-        <strong>Ansatte</strong>
-        <p>Samlet overskrift over dine ansatte og avtaler knyttet til individer.</p>
-        <hr/>
-        <a href="#">Antall ansatte: <strong>24</strong></a>
+        <div class="tile-img"><img src="images/butikk.svg" /></div>
+        <strong>Bedrifsprofil</strong>
+        <p>Kontaktinformasjon, instillinger og tilganger.</p>
+        <!-- <hr/> -->
+        <!-- <a href="#">Antall ansatte: <strong>24</strong></a> -->
       </div>
     </div>
     <div class="grid-item">
       <div class="tile">
-        <img src="images/forsikring.svg" />
-        <strong>Ansatte</strong>
-        <p>Samlet overskrift over dine ansatte og avtaler knyttet til individer.</p>
-        <hr/>
-        <a href="#">Antall ansatte: <strong>24</strong></a>
+        <div class="tile-img"><img src="images/forsikring.svg" /></div>
+        <strong>Min profil</strong>
+        <p>Din personlige profil.</p>
+        <!-- <hr/> -->
+        <!-- <a href="#">Antall ansatte: <strong>24</strong></a> -->
       </div>
     </div>
     <div class="grid-item">
       <div class="tile">
-        <img src="images/enterprise.svg" />
-        <strong>Ansatte</strong>
-        <p>Samlet overskrift over dine ansatte og avtaler knyttet til individer.</p>
+        <div class="tile-img"><img src="images/enterprise.svg" /></div>
+        <strong>Dokumenter</strong>
+        <p>En hel haug med dokumenter ligger her.</p>
         <hr/>
-        <a href="#">Antall ansatte: <strong>24</strong></a>
+        <a href="#">Uleste dokumenter: <strong>1</strong></a>
       </div>
     </div>
 
