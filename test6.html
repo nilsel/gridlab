@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>grid test</title>
+  <link rel="stylesheet" href="https://elements.storebrand.no/storebrand.ny/1.0.10/css/stb-all.min.css" />
+  <style type="text/css">
+
+  body {
+    padding-top: 24px;
+    margin: 24px;
+    background-color: #e6e6e6;
+  }
+
+  a, a:hover {
+    border: none;
+  }
+
+  .gridwrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 24px;
+
+  }
+
+  .grid-item {
+    background-color: #f2f2f2;
+    margin: auto;
+    margin: 0;
+    align-self: stretch;    
+  }
+
+  .tile {
+    height: 100%;
+    display: grid;
+    flex-direction: column;
+    padding: 14px;
+    grid-template-rows: 165px 22px 1fr 22px 22px;
+    /*grid-auto-rows: auto auto 5fr 1fr 1fr;*/
+  }
+
+  /* such style! */
+  .grid-item {
+    border-radius: 2px;
+    transition: box-shadow .15s;
+    box-shadow: rgba(0,0,0,.35) 0 0 8px;
+  }
+  .grid-item:hover {
+    box-shadow: rgba(0,0,0,.25) 0 0 18px;
+
+  }
+
+
+  .tile * {
+    /*border: 1px red dotted;*/
+  }
+  .tile img {
+    width: 50%;
+    max-height: 100px;
+    margin: 2rem auto;
+  }
+  .tile strong {
+    align-self: flex-start;
+    /*border-bottom: 1px solid #000;*/
+  }
+  .tile hr {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .tile a {
+    margin: 0;
+    /*align-self: flex-end;*/
+    height: 20px;
+  }
+
+  </style>
+</head>
+
+<body class="">
+  <div class="gridwrap">
+
+    <div class="grid-item">
+      <div class="tile">
+        <img src="images/employees.svg" />
+        <strong>Ansatte</strong>
+        <p>Samlet overskrift over dine ansatte og avtaler knyttet til individer.</p>
+        <hr/>
+        <a href="#">Antall ansatte: <strong>24</strong></a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="tile">
+        <img src="images/laptop-e.svg" />
+        <strong>Faktura og regnskap</strong>
+        <p>Har du regnskap?! Sa folk. Du kunne tru det sa dem, folk på den tiden hadde jo ikke annet å gjøre serru.</p>
+        <hr/>
+        <a href="#">Ubehandlede faktura: <strong>4</strong></a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="tile">
+        <img src="images/fordelskunde.svg" />
+        <strong>Avtaler</strong>
+        <p>Få oversikt over dine produkter og avtaler.</p>
+        <hr/>
+        <a href="#">Antall ansatte: <strong>24</strong></a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="tile">
+        <img src="images/document.svg" />
+        <strong>Ansatte</strong>
+        <p>Samlet overskrift over dine ansatte og avtaler knyttet til individer.</p>
+        <hr/>
+        <a href="#">Antall ansatte: <strong>24</strong></a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="tile">
+        <img src="images/butikk.svg" />
+        <strong>Ansatte</strong>
+        <p>Samlet overskrift over dine ansatte og avtaler knyttet til individer.</p>
+        <hr/>
+        <a href="#">Antall ansatte: <strong>24</strong></a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="tile">
+        <img src="images/forsikring.svg" />
+        <strong>Ansatte</strong>
+        <p>Samlet overskrift over dine ansatte og avtaler knyttet til individer.</p>
+        <hr/>
+        <a href="#">Antall ansatte: <strong>24</strong></a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="tile">
+        <img src="images/enterprise.svg" />
+        <strong>Ansatte</strong>
+        <p>Samlet overskrift over dine ansatte og avtaler knyttet til individer.</p>
+        <hr/>
+        <a href="#">Antall ansatte: <strong>24</strong></a>
+      </div>
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>
