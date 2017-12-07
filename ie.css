@@ -1,0 +1,14 @@
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+
+  .grid-item {
+    margin: 32px;
+    display: table-cell;
+    width: 33%;
+    height: 450px;
+  }
+
+
+}
