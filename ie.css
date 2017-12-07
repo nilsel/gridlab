@@ -3,11 +3,15 @@
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 
 
+  .gridwrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .grid-item {
     margin: 32px;
-    display: table-cell;
-    width: 33%;
-    height: 450px;
+    width: calc(33.3333% - 32px);
+    flex: 0 0 auto;
   }
 
 
