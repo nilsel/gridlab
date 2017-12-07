@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Prototype 7</title>
+  <link rel="stylesheet" href="https://elements.storebrand.no/storebrand.ny/1.0.10/css/stb-all.min.css" />
+  <link rel="stylesheet" href="anim-heartbeat.css" />
+  <link rel="stylesheet" href="anim-slide.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="grid-layout-polyfill.min.js"></script>
+
+  <style type="text/css">
+
+  /* storebrand.ny overrides */
+  body {
+    padding-top: 24px;
+    margin: 24px;
+    background-color: #f2f2f2;
+  }
+
+  a, a:hover, a:active, a:focus {
+    border: none;
+  }
+  a:visited {
+    color: inherit;
+  }
+
+  hr {
+    border-color: #e6e6e6;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .header-wrap h1 {
+    color: #bd180a;
+    width: 90%;
+    margin: auto;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2;
+    padding-bottom: 32px;
+  }
+
+  /* GRIDS! */
+  .gridwrap {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-gap: 32px;
+    padding-bottom: 32px; /* fix bug where grid goes out of viewport */
+  }
+
+  .grid-item {
+    background-color: #fff;
+    margin: auto;
+    margin: 0;
+    /*align-self: stretch;*/
+    border: solid 1px #cccccc;
+  }
+
+  .tile {
+    height: 100%;
+    display: grid;
+    flex-direction: column;
+    padding: 14px;
+    grid-template-rows: 145px 32px 1fr 22px 22px; /* static height for everything but text content */
+  }
+
+  /* such style! */
+  .grid-item {
+    border-radius: 4px;
+    transition: box-shadow .15s;
+    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.11);
+  }
+  .grid-item:hover {
+    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.22);
+  }
+
+
+  .tile * {
+    /*border: 1px red dotted;*/
+  }
+
+  .tile-img {
+    background-color: #f9f9f9;
+    margin: -14px -14px 14px -14px;
+    overflow: hidden;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+  .tile-img img {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    max-height: 100px;
+    margin: 2rem auto;
+    align-self: center;
+    transition: all 0.25s;
+  }
+  .tile-img.hoover img {
+    transform: scale(1.03, 1.03);
+  }
+
+  .tile > strong {
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .tile hr {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .tile a {
+    margin: 0;
+    height: 20px;
+  }
+
+  .tile .badge {
+    font-weight: 800;
+    font-family: "Open Sans Bold",Arial,ArialMT,sans-serif;
+    background-color: #da291c;
+  }
+  </style>
+</head>
+
+<body class="">
+
+  <script>
+    $('document').ready(function(){
+
+      $('.tile').hover(
+        function(){
+          $(this).find('.tile-img').addClass('hoover');
+        },
+        function(){
+          $(this).find('.tile-img').removeClass('hoover');
+        });
+
+      $('.grid-item .tile-img').click(function(){
+        var elem = $(this).find('img');
+        elem.addClass('slide-out-blurred-top');
+        setTimeout(function(){
+          elem.removeClass('slide-out-blurred-top').addClass('slide-in-blurred-top');
+        }, 1000);
+      })
+
+      $('.grid-item strong').click(function(){
+        $(this).parent().find('.tile-img img').trigger('click');
+      })
+    });
+  </script>
+
+  <div class="header-wrap"><h1>Lillebrand Consulting AS</h1></div>
+
+  <div class="gridwrap">
+
+    <div class="grid-item">
+      <div class="tile">
+        <div class="tile-img"><img src="images/employees.svg" /></div>
+        <strong>Ansatte</strong>
+        <p>Samlet overskrift over dine ansatte og avtaler knyttet til individer.</p>
+        <hr/>
+        <a href="#">Antall ansatte: <span class="badge heartbeat">24</span></a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="tile">
+        <div class="tile-img"><img src="images/laptop-e.svg" /></div>
+        <strong>Faktura og regnskap</strong>
+        <p>Oversikt over fakturaer og regnskap.</p>
+        <hr/>
+        <a href="#">Ubehandlede faktura: <span class="badge">4</span></a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="tile">
+        <div class="tile-img"><img src="images/fordelskunde.svg" /></div>
+        <strong>Lønnsfil</strong>
+        <p>
+          <button class="stb-btn transparent light">Last opp lønnsfil</button>
+        </p>
+        <hr/>
+        <a href="#">Sist oppdatert: <strong>6/12</strong></a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="tile">
+        <div class="tile-img"><img src="images/document.svg" /></div>
+        <strong>Samarbeidsavtaler</strong>
+        <p>Se fordelene du får gjennom ditt medlemskap i NHO.</p>
+        <hr/>
+        <a href="#">Fordeler tatt i bruk: <strong>2 av 5</strong></a>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="tile">
+        <div class="tile-img"><img src="images/butikk.svg" /></div>
+        <strong>Bedrifsprofil</strong>
+        <p>Kontaktinformasjon, instillinger og tilganger.</p>
+        <!-- <hr/> -->
+        <!-- <a href="#">Antall ansatte: <strong>24</strong></a> -->
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="tile">
+        <div class="tile-img"><img src="images/forsikring.svg" /></div>
+        <strong>Min profil</strong>
+        <p>Din personlige profil.</p>
+        <!-- <hr/> -->
+        <!-- <a href="#">Antall ansatte: <strong>24</strong></a> -->
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="tile">
+        <div class="tile-img"><img src="images/enterprise.svg" /></div>
+        <strong>Dokumenter</strong>
+        <p>En hel haug med dokumenter ligger her.</p>
+        <hr/>
+        <a href="#">Uleste dokumenter: <strong>1</strong></a>
+      </div>
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>
