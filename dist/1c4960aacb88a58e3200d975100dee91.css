@@ -1,0 +1,116 @@
+  /* storebrand.ny overrides */
+  body {
+    padding-top: 24px;
+    margin: 24px;
+    background-color: #f2f2f2;
+  }
+
+  a, a:hover, a:active, a:focus {
+    border: none;
+  }
+  a:visited {
+    color: inherit;
+  }
+
+  hr {
+    border-color: #e6e6e6;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .header-wrap h1 {
+    color: #bd180a;
+    width: 90%;
+    margin: auto;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.2;
+    padding-bottom: 32px;
+  }
+
+  /* GRIDS! */
+  .gridwrap {
+    width: 90%;
+    margin: auto;
+    /*display: -ms-grid;*/
+    /*-ms-grid-columns: repeat(auto-fit, minmax(275px, 1fr));*/
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-gap: 32px;
+
+    padding-bottom: 32px; /* fix bug where grid goes out of viewport */
+  }
+
+  .grid-item {
+    background-color: #fff;
+    margin: auto;
+    margin: 0;
+    /*align-self: stretch;*/
+    border: solid 1px #cccccc;
+  }
+
+  .tile {
+    height: 100%;
+    display: grid;
+    flex-direction: column;
+    padding: 14px;
+    grid-template-rows: 145px 32px 1fr 22px 22px; /* static height for everything but text content */
+  }
+
+  /* such style! */
+  .grid-item {
+    border-radius: 4px;
+    transition: box-shadow .15s;
+    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.11);
+  }
+  .grid-item:hover {
+    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.22);
+  }
+
+
+  .tile * {
+    /*border: 1px red dotted;*/
+  }
+
+  .tile-img {
+    background-color: #f9f9f9;
+    margin: -14px -14px 14px -14px;
+    overflow: hidden;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+  .tile-img img {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    max-height: 100px;
+    margin: 2rem auto;
+    align-self: center;
+    transition: all 0.25s;
+  }
+  .tile-img.hoover img {
+    transform: scale(1.03, 1.03);
+  }
+
+  .tile > strong {
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .tile hr {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .tile a {
+    margin: 0;
+    height: 20px;
+  }
+
+  .tile .badge {
+    font-weight: 800;
+    font-family: "Open Sans Bold",Arial,ArialMT,sans-serif;
+    background-color: #da291c;
+  }

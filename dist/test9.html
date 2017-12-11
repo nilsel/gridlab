@@ -5,145 +5,29 @@
   <meta charset="UTF-8">
   <title>Prototype 9</title>
   <link rel="stylesheet" href="https://elements.storebrand.no/storebrand.ny/1.0.10/css/stb-all.min.css">
-  <link rel="stylesheet" href="/dist/4d9687148f2e4e5c5ed3633ba26a44be.css">
-  <link rel="stylesheet" href="/dist/8399da33f56a00d2bb138b1079a7d753.css">
+  <link rel="stylesheet" href="/dist/8b39b87b31b4c132907403bd76d697b7.css">
+  <link rel="stylesheet" href="/dist/029c546cd4f974478c6d6263a457ea65.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <link rel="stylesheet" href="/dist/2da1268e458cd39ceb3597407da961f6.css">
+  <link rel="stylesheet" href="/dist/c0a4f30b236bdd910862b0733f1de480.css">
 
-  <style type="text/css">
-
-  /* storebrand.ny overrides */
-  body {
-    padding-top: 24px;
-    margin: 24px;
-    background-color: #f2f2f2;
-  }
-
-  a, a:hover, a:active, a:focus {
-    border: none;
-  }
-  a:visited {
-    color: inherit;
-  }
-
-  hr {
-    border-color: #e6e6e6;
-  }
-
-  p {
-    font-size: 15px;
-  }
-
-  .header-wrap h1 {
-    color: #bd180a;
-    width: 90%;
-    margin: auto;
-    font-size: 40px;
-    font-weight: 300;
-    line-height: 1.2;
-    padding-bottom: 32px;
-  }
-
-  /* GRIDS! */
-  .gridwrap {
-    width: 90%;
-    margin: auto;
-    /*display: -ms-grid;*/
-    /*-ms-grid-columns: repeat(auto-fit, minmax(275px, 1fr));*/
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-    grid-gap: 32px;
-
-    padding-bottom: 32px; /* fix bug where grid goes out of viewport */
-  }
-
-  .grid-item {
-    background-color: #fff;
-    margin: auto;
-    margin: 0;
-    /*align-self: stretch;*/
-    border: solid 1px #cccccc;
-  }
-
-  .tile {
-    height: 100%;
-    display: grid;
-    flex-direction: column;
-    padding: 14px;
-    grid-template-rows: 145px 32px 1fr 22px 22px; /* static height for everything but text content */
-  }
-
-  /* such style! */
-  .grid-item {
-    border-radius: 4px;
-    transition: box-shadow .15s;
-    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.11);
-  }
-  .grid-item:hover {
-    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.22);
-  }
-
-
-  .tile * {
-    /*border: 1px red dotted;*/
-  }
-
-  .tile-img {
-    background-color: #f9f9f9;
-    margin: -14px -14px 14px -14px;
-    overflow: hidden;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
-  }
-  .tile-img img {
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
-    max-height: 100px;
-    margin: 2rem auto;
-    align-self: center;
-    transition: all 0.25s;
-  }
-  .tile-img.hoover img {
-    transform: scale(1.03, 1.03);
-  }
-
-  .tile > strong {
-    font-size: 16px;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
-  .tile hr {
-    width: 100%;
-    margin: 10px 0;
-  }
-  .tile a {
-    margin: 0;
-    height: 20px;
-  }
-
-  .tile .badge {
-    font-weight: 800;
-    font-family: "Open Sans Bold",Arial,ArialMT,sans-serif;
-    background-color: #da291c;
-  }
-  </style>
+  <link rel="stylesheet" href="/dist/1c4960aacb88a58e3200d975100dee91.css">
 </head>
 
 <body class="">
 
-  <script src="/dist/3a3f4b86133ea65e75dc4e0aaaedd27c.js"></script>
+  <script src="/dist/gridlab.js"></script>
 
-  <div class="header-wrap"><h1>Lillebrand Consulting AS</h1></div>
+  <div class="header-wrap">
+    <h1>Lillebrand Consulting AS</h1>
+  </div>
 
   <div class="gridwrap">
 
     <div class="grid-item">
       <div class="tile">
-        <div class="tile-img"><img src="/dist/d99a83239f41c4b2285f3012a9537262.svg"></div>
+        <div class="tile-img"><img src="/dist/661cf3d798d41478389db5403e793e5c.svg"></div>
         <strong>Ansatte</strong>
         <p>Samlet overskrift over dine ansatte og avtaler knyttet til individer.</p>
         <hr>
@@ -152,7 +36,7 @@
     </div>
     <div class="grid-item">
       <div class="tile">
-        <div class="tile-img"><img src="/dist/45716c17dc7a8efa65ff2bd56048bda9.svg"></div>
+        <div class="tile-img"><img src="/dist/dbe7c5c9da231a745f3e5d7cfa92d31f.svg"></div>
         <strong>Faktura og regnskap</strong>
         <p>Oversikt over fakturaer og regnskap.</p>
         <hr>
@@ -161,7 +45,7 @@
     </div>
     <div class="grid-item">
       <div class="tile">
-        <div class="tile-img"><img src="/dist/6a52f174fa9b249ef49f86b36c4078d3.svg"></div>
+        <div class="tile-img"><img src="/dist/c0e08f9212dca965de76ee63a471ee86.svg"></div>
         <strong>Lønnsfil</strong>
         <p>
           <button class="stb-btn transparent light">Last opp lønnsfil</button>
@@ -172,7 +56,7 @@
     </div>
     <div class="grid-item">
       <div class="tile">
-        <div class="tile-img"><img src="/dist/4bda87c666b717753d7fba06eac372e6.svg"></div>
+        <div class="tile-img"><img src="/dist/aaad544f08b2d3f8ed88bbf0201172be.svg"></div>
         <strong>Samarbeidsavtaler</strong>
         <p>Se fordelene du får gjennom ditt medlemskap i NHO.</p>
         <hr>
@@ -181,7 +65,7 @@
     </div>
     <div class="grid-item">
       <div class="tile">
-        <div class="tile-img"><img src="/dist/5545d5737eb927fedb4aea09f9dec291.svg"></div>
+        <div class="tile-img"><img src="/dist/f83f4008ccfb04a8f7ad2534f12061a3.svg"></div>
         <strong>Bedrifsprofil</strong>
         <p>Kontaktinformasjon, instillinger og tilganger.</p>
         <!-- <hr/> -->
@@ -190,7 +74,7 @@
     </div>
     <div class="grid-item">
       <div class="tile">
-        <div class="tile-img"><img src="/dist/63731e182c7c5e90397401f730e1f929.svg"></div>
+        <div class="tile-img"><img src="/dist/666bd49ff0ec8aa2478c5c5d88b692e0.svg"></div>
         <strong>Min profil</strong>
         <p>Din personlige profil.</p>
         <!-- <hr/> -->
@@ -199,7 +83,7 @@
     </div>
     <div class="grid-item">
       <div class="tile">
-        <div class="tile-img"><img src="/dist/d58b2738bea80b66d9d847eb36281209.svg"></div>
+        <div class="tile-img"><img src="/dist/e40a8ae550877ad623aeb4677ff04a1e.svg"></div>
         <strong>Dokumenter</strong>
         <p>En hel haug med dokumenter ligger her.</p>
         <hr>
