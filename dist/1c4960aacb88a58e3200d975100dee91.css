@@ -72,7 +72,7 @@
     box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.11);
   }
   .grid-item:hover {
-    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.33);
   }
 
 
@@ -96,7 +96,7 @@
     transition: all 0.25s;
   }
   .tile-img.hoover img {
-    transform: scale(1.03, 1.03);
+    // transform: scale(1.02, 1.02);
   }
 
   .tile > strong {
