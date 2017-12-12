@@ -20,5 +20,15 @@ $('document').ready(function(){
 
   $('.grid-item strong').click(function(){
     $(this).parent().find('.tile-img img').trigger('click');
-  })
+  });
+
+
+  $("select[data-widget=chosenSelect]").chosen();
+  $("select[data-widget=chosenSelect]").chosen().change(
+    function(e){
+      console.log('yay i changed', e.target.value);
+    }
+  );
+
+
 });

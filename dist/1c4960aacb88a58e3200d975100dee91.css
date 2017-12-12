@@ -38,7 +38,7 @@
     /*-ms-grid-columns: repeat(auto-fit, minmax(275px, 1fr));*/
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 32px;
 
     padding-bottom: 32px; /* fix bug where grid goes out of viewport */
@@ -50,6 +50,11 @@
     margin: 0;
     /*align-self: stretch;*/
     border: solid 1px #cccccc;
+  }
+
+  .grid-item.shortcuts {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 2;
   }
 
   .tile {
@@ -100,6 +105,10 @@
     cursor: pointer;
   }
 
+  .tile ul.list {
+    margin-left: 30px;
+  }
+
   .tile hr {
     width: 100%;
     margin: 10px 0;
@@ -114,3 +123,9 @@
     font-family: "Open Sans Bold",Arial,ArialMT,sans-serif;
     background-color: #da291c;
   }
+
+
+
+.chosen-drop, .chosen-single {
+  width: 290px;
+}

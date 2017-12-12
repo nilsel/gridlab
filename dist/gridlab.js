@@ -65,7 +65,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({19:[function(require,module,exports) {
+})({6:[function(require,module,exports) {
 
 
 $('document').ready(function(){
@@ -88,7 +88,17 @@ $('document').ready(function(){
 
   $('.grid-item strong').click(function(){
     $(this).parent().find('.tile-img img').trigger('click');
-  })
+  });
+
+
+  $("select[data-widget=chosenSelect]").chosen();
+  $("select[data-widget=chosenSelect]").chosen().change(
+    function(e){
+      console.log('yay i changed', e.target.value);
+    }
+  );
+
+
 });
 },{}],0:[function(require,module,exports) {
 var global = (1,eval)('this');
@@ -108,7 +118,7 @@ function Module() {
 module.bundle.Module = Module;
 
 if (!module.bundle.parent) {
-  var ws = new WebSocket('ws://localhost:56782/');
+  var ws = new WebSocket('ws://localhost:58520/');
   ws.onmessage = (e) => {
     var data = JSON.parse(e.data);
 
@@ -198,4 +208,4 @@ function hmrAccept(bundle, id) {
 
   return getParents(global.require, id).some(id => hmrAccept(global.require, id));
 }
-},{}]},{},[0,19])
+},{}]},{},[0,6])
