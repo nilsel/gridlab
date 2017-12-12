@@ -8,8 +8,8 @@
   }
 
   .grid-item {
-    margin: 32px;
-    width: calc(33.3333% - 32px);
+    width: calc(33.333333% - 12px);
+    margin: 24px !important;
     flex: 0 0 auto;
   }
 

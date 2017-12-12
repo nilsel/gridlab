@@ -146,7 +146,7 @@ function Module() {
 module.bundle.Module = Module;
 
 if (!module.bundle.parent) {
-  var ws = new WebSocket('ws://localhost:55221/');
+  var ws = new WebSocket('ws://localhost:56782/');
   ws.onmessage = (e) => {
     var data = JSON.parse(e.data);
 
