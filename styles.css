@@ -1,7 +1,11 @@
   /* storebrand.ny overrides */
   body {
-    padding-top: 24px;
-    margin: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    padding-top: 6rem;
+    margin: 0;
     background-color: #f2f2f2;
   }
 
@@ -20,9 +24,38 @@
     font-size: 15px;
   }
 
+
+
+  header {
+    width: 100%;
+    margin: 0;
+    background-color: #bd180a;
+  }
+  header div.menu {
+    width: 95%;
+    margin: 0 auto;
+    padding: 14px 0 14px 0;
+    display: flex;
+  }
+  header img.stb-logo {
+    width: 165px;
+  }
+  header .menu > .buttons {
+      margin-left: auto;
+  }
+  header .menu .buttons button {
+    width: 143px;
+    height: 42px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #fff;
+    border: solid 1px rgba(0,0,0,.25);
+  }
+
+
   .header-wrap h1 {
     color: #bd180a;
-    width: 90%;
+    width: 95%;
     margin: auto;
     font-size: 40px;
     font-weight: 300;
@@ -32,7 +65,7 @@
 
   /* GRIDS! */
   .gridwrap {
-    width: 90%;
+    width: 95%;
     margin: auto;
     /*display: -ms-grid;*/
     /*-ms-grid-columns: repeat(auto-fit, minmax(275px, 1fr));*/
