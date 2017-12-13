@@ -4,6 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Prototype 13</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#DA291C">
+  <meta name="msapplication-navbutton-color" content="#DA291C">
+  <meta name="theme-color" content="#DA291C">
+
   <link rel="stylesheet" href="https://elements.storebrand.no/storebrand.ny/1.0.10/css/stb-all.min.css" />
   <link rel="stylesheet" href="anim-heartbeat.css" />
   <link rel="stylesheet" href="anim-slide.css" />
@@ -66,7 +72,7 @@
 
               <!--
               <hr/>
-              <a href="#">Foo</a>
+              <a>Foo</a>
               -->
             </div>
           </div>
@@ -81,23 +87,23 @@
               <div class="tile-content">
                 <strong>Snarveier</strong>
                 <ul class="list">
-                  <li><a href="#">Innmelding</a></li>
-                  <li><a href="#">Innmelding flere ansatte</a></li>
-                  <li><a href="#">Utmelding</a></li>
-                  <li><a href="#">Utmelding flere ansatte</a></li>
-                  <li><a href="#">Endre lønn, deltid m.m.</a></li>
-                  <li><a href="#">Endre lønn og deltid på flere</a></li>
-                  <li><a href="#">Jobbskifte internt i konsernet</a></li>
-                  <li><a href="#">Melding om avslutning av avtale</a></li>
-                  <li><a href="#">Registrer antallsoppgave</a></li>
-                  <li><a href="#">Meld sykdom</a></li>
-                  <li><a href="#">Meld skade</a></li>
-                  <li><a href="#">Meld dødsfall</a></li>
-                  <li><a href="#">Se innsendte endringer</a></li>
+                  <li><a>Innmelding</a></li>
+                  <li><a>Innmelding flere ansatte</a></li>
+                  <li><a>Utmelding</a></li>
+                  <li><a>Utmelding flere ansatte</a></li>
+                  <li><a>Endre lønn, deltid m.m.</a></li>
+                  <li><a>Endre lønn og deltid på flere</a></li>
+                  <li><a>Jobbskifte internt i konsernet</a></li>
+                  <li><a>Melding om avslutning av avtale</a></li>
+                  <li><a>Registrer antallsoppgave</a></li>
+                  <li><a>Meld sykdom</a></li>
+                  <li><a>Meld skade</a></li>
+                  <li><a>Meld dødsfall</a></li>
+                  <li><a>Se innsendte endringer</a></li>
                 </ul>
 
               <hr/>
-              <a href="#">Ubehandlede faktura: <span class="badge">4</span></a>
+              <a>Ubehandlede faktura: <span class="badge">4</span></a>
             </div>
           </div>
         </div>
@@ -152,7 +158,7 @@
 
 
               <hr/>
-              <a href="#">Foreslå ny snarvei</a>
+              <a>Foreslå ny snarvei</a>
             </div>
           </div>
         </div>
@@ -166,7 +172,7 @@
               <strong>Faktura og regnskap</strong>
               <p>Oversikt over fakturaer og regnskap.</p>
               <hr/>
-              <a href="#">Ubehandlede faktura: <span class="badge">4</span></a>
+              <a>Ubehandlede faktura: <span class="badge">4</span></a>
             </div>
           </div>
         </div>
@@ -182,7 +188,7 @@
                 <button class="stb-btn transparent light">Last opp lønnsfil</button>
               </p>
               <hr/>
-              <a href="#">Sist oppdatert: <strong>6/12</strong></a>
+              <a>Sist oppdatert: <strong>6/12</strong></a>
             </div>          
           </div>
 
@@ -191,15 +197,30 @@
 
 
       <div class="grid-item">
-        <div class="tile">
+        <div class="tile flipmode">
           <div class="front">
             <div class="tile-img"><img src="images/document.svg" /></div>
             <div class="tile-content">
               <strong>Samarbeidsavtaler</strong>
               <p>Se fordelene du får gjennom ditt medlemskap i NHO.</p>
               <hr/>
-              <a href="#">Fordeler tatt i bruk: <strong>2 av 5</strong></a>
+              <a>Fordeler tatt i bruk: <strong>2 av 4</strong></a>
             </div>
+          </div>
+          <div class="back">
+            <div class="tile-img"><img src="images/document.svg" /></div>
+            <div class="tile-content">
+              <strong>Samarbeidsavtaler</strong>
+              <!-- <p>Se fordelene du får gjennom ditt medlemskap i NHO.</p> -->
+              <ul class="list" style="list-style: none; margin-left: 12px">
+                <li>✅ Forsikring</li>
+                <li>✅ Kollektiv pensjonsordning</li>
+                <li>⛔ Ansattefordeler</li>
+                <li>⛔ Serviceansvarlig</li>
+              </ul>
+<!--               <hr/>
+              <a>Fordeler tatt i bruk: <strong>2 av 5</strong></a>
+ -->            </div>
           </div>
         </div>
       </div>
@@ -242,7 +263,7 @@
               <strong>Dokumenter</strong>
               <p>En hel haug med dokumenter ligger her.</p>
               <hr/>
-              <a href="#">Uleste dokumenter: <strong>1</strong></a>
+              <a>Uleste dokumenter: <strong>1</strong></a>
             </div>
           </div>
         </div>
