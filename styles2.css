@@ -15,17 +15,15 @@
   a:visited {
     color: inherit;
   }
-
   hr {
     border-color: #e6e6e6;
   }
-
   p {
     font-size: 15px;
   }
 
 
-
+  /* HEADER */
   header {
     width: 100%;
     margin: 0;
@@ -53,11 +51,7 @@
     border: solid 1px rgba(0,0,0,.25);
     font-size: 16px;
     font-family: "Helvetica Neue", Times;
-
-
   }
-
-
   .header-wrap h1 {
     color: #bd180a;
     width: 95%;
@@ -68,13 +62,11 @@
     padding-bottom: 32px;
   }
 
+
   /* GRIDS! */
   .gridwrap {
     width: 95%;
     margin: auto;
-    /*display: -ms-grid;*/
-    /*-ms-grid-columns: repeat(auto-fit, minmax(275px, 1fr));*/
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
@@ -83,48 +75,38 @@
     padding-bottom: 32px; /* fix bug where grid goes out of viewport */
   }
 
+  /* Shortcut tile spans 2 rows */
+  .grid-item.shortcuts {
+    grid-row: 1 / span 2;
+  }
+
+
+  /* Tile: our main items: holds a .front + .back */
   .tile {
     background-color: #fff;
     margin: auto;
     margin: 0;
-    /*align-self: stretch;*/
     border: solid 1px #cccccc;
-  }
-
-  .grid-item.shortcuts {
-    // grid-column: 2 / 3;
-    grid-row: 1 / span 2;
-  }
-
-  .tile {
     height: 100%;
-    // padding: 14px;
-  }
-
-  .tile-content {
-    display: grid;
-    grid-template-rows: 30px 1fr 20px 25px;
-    height: calc(100% - 130px);
-
-    padding: 14px;
-  }
-
-  /* such style! */
-  .tile {
     border-radius: 4px;
     transition: box-shadow .15s;
     box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.11);
-
   }
   .tile:hover {
     box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.33);
   }
-
-
   .tile * {
     /*border: 1px red dotted;*/
   }
 
+
+  /* subgrid for tile content - vertically aligned content */
+  .tile-content {
+    display: grid;
+    grid-template-rows: 30px 1fr 20px 25px;
+    height: calc(100% - 130px);
+    padding: 14px;
+  }
 
 
 
@@ -134,28 +116,21 @@
   }
   .tile.flipmode {
     transition: .5s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     transform-style: preserve-3d;
-    // position: absolute;
   }
-
   .flipmode .front {
     backface-visibility: hidden;
-    // position: absolute;
   }
-  
   .flipmode .back {
     backface-visibility: hidden;
     position: absolute;
   }
-  
-
   .front, .back {
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    // width: 300px;
-    // height: 300px;
   }
   .tile.hoover {
     transform: rotateY(180deg);
@@ -170,9 +145,9 @@
   }
 
 
+  /* Top part of the tile */
   .tile-img {
     background-color: #f9f9f9;
-    // margin: -14px -14px 20px -14px;
     margin: 0;
     overflow: hidden;
     border-top-right-radius: 4px;
@@ -190,6 +165,7 @@
     // transform: scale(1.02, 1.02);
   }
 
+  /* Tile content */
   .tile strong {
     font-size: 16px;
     text-decoration: underline;
@@ -197,11 +173,9 @@
     display: inline-block;
     padding-bottom: 12px;
   }
-
   .tile ul.list {
     margin-left: 30px;
   }
-
   .tile hr {
     width: 100%;
     margin: 10px 0;
@@ -211,13 +185,11 @@
     height: 20px;
     align-self: flex-end;
   }
-
   .tile .badge {
     font-weight: 800;
     font-family: "Open Sans Bold",Arial,ArialMT,sans-serif;
     background-color: #da291c;
   }
-
   .tile ul.minibuttons li:hover {
     border-color: #000;
   }
@@ -232,6 +204,6 @@
     border-radius: 2px;
   }
 
-.chosen-drop, .chosen-single {
-  width: 290px;
-}
+  .chosen-drop, .chosen-single {
+    width: 290px;
+  }
