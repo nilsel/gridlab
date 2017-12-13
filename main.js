@@ -10,6 +10,12 @@ $('document').ready(function(){
       $(this).find('.tile-img').removeClass('hoover');
     });
 
+  $('.tile.flipmode .link').click(
+    function(){
+      console.log($(this).parents('.tile'));
+      $(this).parents('.tile').toggleClass('hoover');
+  });
+
   $('.grid-item .tile-img').click(function(){
     var elem = $(this).find('img');
     elem.addClass('slide-out-blurred-top');
