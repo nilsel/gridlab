@@ -12,8 +12,8 @@ $('document').ready(function(){
 
   $('.tile.flipmode .link').click(
     function(){
-      console.log($(this).parents('.tile'));
-      $(this).parents('.tile').toggleClass('hoover');
+      // console.log($(this).parents('.tile'));
+      $(this).parents('.tile').toggleClass('flipped');
   });
 
   $('.grid-item .tile-img').click(function(){

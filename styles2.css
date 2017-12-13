@@ -132,7 +132,7 @@
     top: 0;
     left: 0;
   }
-  .tile.hoover {
+  .tile.flipped {
     transform: rotateY(180deg);
   }
   .tile.flipmode .front {
