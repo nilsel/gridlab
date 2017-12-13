@@ -10,10 +10,11 @@ $('document').ready(function(){
       $(this).find('.tile-img').removeClass('hoover');
     });
 
-  $('.tile.flipmode .link').click(
+  $('.tile.flipmode').click(
     function(){
       // console.log($(this).parents('.tile'));
-      $(this).parents('.tile').toggleClass('flipped');
+      // $(this).parents('.tile').toggleClass('flipped');
+      $(this).toggleClass('flipped');
   });
 
   $('.grid-item .tile-img').click(function(){
