@@ -33,7 +33,8 @@ $('document').ready(function(){
   $("select[data-widget=chosenSelect]").chosen().change(
     function(e){
       // console.log('yay i changed', e.target.value);
-      $('#take2').find('strong').click();
+      $(this).parents('.tile').find('.tile-img img').trigger('click');
+
     }
   );
 
