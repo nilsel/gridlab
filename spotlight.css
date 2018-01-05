@@ -1,6 +1,19 @@
-body {
-  background-color: #fff9f2;
+
+
+ul[role="listbox"] {
+  position: relative;
+  left: 130px;
+  background-color: #fff;
+  width: 64%;
+  padding: 12px;
 }
+
+li[aria-selected="true"]{
+  background-color: red;
+}
+
+
+
 
 #spotlight_wrapper {
   position: absolute;

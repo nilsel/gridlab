@@ -21,6 +21,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://elements.storebrand.no/storebrand.ny/1.0.8/js/src/chosen.jquery.js"></script>
   <script src="./main2.js"></script>
+  <script src="./awesomplete.js"></script>
 </head>
 
 <body>
@@ -37,7 +38,11 @@
 
 
 <div id="spotlight_wrapper">
-  <input type="text" id="spotlight" placeholder="Spotlight-Search" />
+  <!-- <input type="text" id="spotlight" placeholder="Spotlight-Search" /> -->
+
+
+<input type="text" class="awesomplete" id="spotlight"
+       data-list="Ada, Java, JavaScript, Brainfuck, LOLCODE, Node.js, Ruby on Rails" />
 </div>
 
 

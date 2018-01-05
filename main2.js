@@ -99,7 +99,8 @@ $document.on('keydown',function(event){
     pissed = true;
 
     var inputText = $spotlight.val();
-    console.log('input: ' + inputText);
+    setTimeout(function(){ alert('input: ' + inputText); }, 0);
+    hideSpotlight();
   }
   
 });
