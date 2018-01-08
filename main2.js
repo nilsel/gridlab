@@ -39,6 +39,10 @@ $('document').ready(function(){
     }
   );
 
+  $('.grid-item[data-mode="link"]').click(function(){
+    console.log($(this).attr('data-target'));
+    window.location = $(this).attr('data-target');
+  })
 
 
 
