@@ -23,6 +23,28 @@
   }
 
 
+  /* NOTIFIY */
+  #notify {
+    display: none;
+    /*opacity: 0;*/
+    /*transition: opacity .2s ease-out;*/
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    width: 446px;
+    height: 555px;
+    background-image: url(./images/notfication.png);
+    background-repeat: no-repeat;
+    z-index: 100;
+  }
+
+  #notify.visible {
+    display: block;
+    /*opacity: 1;*/
+  }
+
+
+
   /* HEADER */
   header {
     width: 100%;

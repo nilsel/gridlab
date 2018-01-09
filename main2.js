@@ -44,6 +44,9 @@ $('document').ready(function(){
     window.location = $(this).attr('data-target');
   })
 
+  $('#kundeservice').click(function(){
+    $('#notify').toggleClass('visible');
+  });
 
 
 /* set vars */
